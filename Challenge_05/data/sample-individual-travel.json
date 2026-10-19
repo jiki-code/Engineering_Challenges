@@ -1,0 +1,65 @@
+{
+  "policy_number": "POL-2025-INT-TRV-4421",
+  "policyholder": {
+    "name": "James Mitchell",
+    "type": "INDIVIDUAL",
+    "date_of_birth": "1988-07-14",
+    "gender": "Male",
+    "id_number": "P12345678"
+  },
+  "plan": {
+    "name": "Global Travel Shield",
+    "tier": "Platinum",
+    "effective_date": "2025-03-01",
+    "expiry_date": "2025-12-31",
+    "currency": "USD"
+  },
+  "benefits": [
+    {
+      "type": "EMERGENCY_MEDICAL",
+      "annual_limit": 1000000,
+      "sub_benefits": [
+        { "name": "Emergency Hospitalization", "limit_per_event": 500000 },
+        { "name": "Emergency Surgery", "limit_per_event": 200000 },
+        { "name": "Emergency Outpatient", "limit_per_visit": 5000, "visits_per_year": 10 },
+        { "name": "Emergency Dental", "limit_per_event": 2000 },
+        { "name": "Prescription Drugs (Emergency)", "limit_per_trip": 1000 }
+      ]
+    },
+    {
+      "type": "TRAVEL_ACCIDENT",
+      "annual_limit": 500000,
+      "sub_benefits": [
+        { "name": "Accidental Death & Dismemberment", "limit_per_event": 500000 },
+        { "name": "Permanent Disability", "limit_per_person": 250000 },
+        { "name": "Total Temporary Disability", "limit_per_day": 200, "max_days": 180 }
+      ]
+    },
+    {
+      "type": "EVACUATION",
+      "annual_limit": 500000,
+      "sub_benefits": [
+        { "name": "Medical Evacuation", "limit_per_event": 500000 },
+        { "name": "Repatriation of Remains", "limit_per_event": 50000 },
+        { "name": "Travel Companion", "limit_per_event": 5000 }
+      ]
+    }
+  ],
+  "exclusions": [
+    "Pre-existing medical conditions",
+    "Adventure or extreme sports (without add-on rider)",
+    "War, terrorism, or civil unrest",
+    "Travelling against medical advice",
+    "Alcohol or drug-related incidents",
+    "Pregnancy complications after 28 weeks"
+  ],
+  "network": {
+    "type": "GLOBAL",
+    "hospital_count": 10000,
+    "countries": [
+      "United States", "United Kingdom", "France", "Germany", "Japan",
+      "Australia", "Singapore", "Thailand", "Canada", "All other countries"
+    ],
+    "notes": "Direct billing available at over 10,000 network hospitals worldwide."
+  }
+}

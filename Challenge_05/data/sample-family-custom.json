@@ -1,0 +1,80 @@
+{
+  "policy_number": "POL-2025-VN-FAM-9988",
+  "policyholder": {
+    "name": "Trần Bảo Long & Family",
+    "type": "FAMILY",
+    "employee_count": 1
+  },
+  "plan": {
+    "name": "Family Elite Health & Wellness",
+    "tier": "Platinum",
+    "effective_date": "2025-01-01",
+    "expiry_date": "2025-12-31",
+    "currency": "VND"
+  },
+  "members": {
+    "total": 4,
+    "employee": 1,
+    "dependent_spouse": 1,
+    "dependent_child": 2
+  },
+  "benefits": [
+    {
+      "type": "INPATIENT",
+      "annual_limit": 600000000,
+      "sub_benefits": [
+        { "name": "Standard Hospital Room", "limit_per_day": 3000000, "max_days": 180 },
+        { "name": "Intensive Care Unit (ICU)", "limit_per_day": 6000000, "max_days": 60 },
+        { "name": "Major Surgery", "limit_per_event": 120000000 },
+        { "name": "Emergency Medical Transport", "limit_per_event": 3000000 }
+      ]
+    },
+    {
+      "type": "OUTPATIENT",
+      "annual_limit": 60000000,
+      "sub_benefits": [
+        { "name": "General Doctor Consultation", "limit_per_visit": 600000, "visits_per_year": 40 },
+        { "name": "Specialist Medical Consultation", "limit_per_visit": 1500000, "visits_per_year": 15 },
+        { "name": "Prescribed Pharmaceuticals", "limit_per_visit": 1200000 },
+        { "name": "Diagnostic Imaging & Laboratory", "limit_per_year": 20000000 }
+      ]
+    },
+    {
+      "type": "VISION",
+      "annual_limit": 15000000,
+      "sub_benefits": [
+        { "name": "Annual Comprehensive Eye Exam", "limit_per_year": 1500000 },
+        { "name": "Prescription Spectacles & Contact Lenses", "limit_per_year": 8000000 },
+        { "name": "Corrective Laser Surgery (LASIK)", "limit_per_event": 10000000 }
+      ]
+    },
+    {
+      "type": "WELLNESS",
+      "annual_limit": 25000000,
+      "sub_benefits": [
+        { "name": "Annual Executive Health Screening", "limit_per_year": 12000000 },
+        { "name": "Vaccinations & Immunizations", "limit_per_year": 5000000 },
+        { "name": "Nutritional & Dietary Counselling", "limit_per_visit": 800000, "visits_per_year": 6 },
+        { "name": "Fitness Club & Wellness Center Subsidy", "limit_per_year": 6000000 }
+      ]
+    }
+  ],
+  "exclusions": [
+    "Pre-existing illnesses not disclosed at enrollment",
+    "Cosmetic surgeries and elective aesthetic treatments",
+    "Self-inflicted injuries or high-risk unregistered activities",
+    "Treatments outside approved medical provider networks without referral"
+  ],
+  "copay": {
+    "inpatient": { "percentage": 0 },
+    "outpatient": { "percentage": 15, "max_per_visit": 300000 },
+    "vision": { "percentage": 10 },
+    "wellness": { "percentage": 0, "flat_fee": 100000 }
+  },
+  "network": {
+    "type": "PREFERRED_PROVIDER",
+    "hospital_count": 320,
+    "clinic_count": 180,
+    "countries": ["Vietnam", "Singapore"]
+  }
+}

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ─────────────────────────────────────────────── */
+@layer base {
+  html {
+    @apply scroll-smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  body {
+    @apply bg-slate-100/60 text-slate-900 antialiased font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ── Reusable Component Classes (Insurtech Enterprise Style) ─── */
+@layer components {
+  /* Section Card */
+  .section-card {
+    @apply bg-white rounded-xl border border-slate-200/90 shadow-[0_1px_3px_rgba(15,23,42,0.04)] overflow-hidden;
+  }
+  .section-header {
+    @apply flex items-center justify-between gap-3 px-5 py-3.5 border-b border-slate-100 bg-slate-50/50;
+  }
+  .section-title {
+    @apply text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-2;
+  }
+  .section-body {
+    @apply p-5 sm:p-6;
+  }
+
+  /* Status Badges & Tags */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-xs font-semibold tracking-tight;
+  }
+  .badge-neutral { @apply badge bg-slate-100 text-slate-700 border border-slate-200; }
+  .badge-brand   { @apply badge bg-slate-900 text-white border border-slate-900; }
+  .badge-success { @apply badge bg-emerald-50 text-emerald-800 border border-emerald-200; }
+  .badge-warning { @apply badge bg-amber-50 text-amber-900 border border-amber-300; }
+  .badge-danger  { @apply badge bg-rose-50 text-rose-800 border border-rose-200; }
+  .badge-info    { @apply badge bg-sky-50 text-sky-800 border border-sky-200; }
+
+  /* Legacy tier badges */
+  .badge-gold   { @apply badge bg-amber-50 text-amber-900 border border-amber-300; }
+  .badge-silver { @apply badge-neutral; }
+  .badge-bronze { @apply badge bg-orange-50 text-orange-900 border border-orange-300; }
+  .badge-blue   { @apply badge-info; }
+  .badge-red    { @apply badge-danger; }
+  .badge-green  { @apply badge-success; }
+
+  /* Waiting Period Highlighting (Clock icon, yellow/amber theme) */
+  .badge-waiting {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold
+           bg-amber-100/90 text-amber-900 border border-amber-300;
+  }
+  .alert-waiting {
+    @apply flex items-start gap-3 rounded-r-lg border-y border-r border-amber-200/80
+           border-l-4 border-l-amber-500 bg-amber-50/60 p-3 sm:p-3.5 text-xs sm:text-sm text-amber-950;
+  }
+
+  /* Exclusions Highlighting (Warning icon, light red theme) */
+  .badge-exclusion {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold
+           bg-rose-100/80 text-rose-900 border border-rose-200;
+  }
+  .alert-exclusion {
+    @apply flex items-start gap-3 rounded-r-lg border-y border-r border-rose-200/80
+           border-l-4 border-l-rose-500 bg-rose-50/50 p-3 sm:p-3.5 text-xs sm:text-sm text-rose-950;
+  }
+
+  .alert-warn   { @apply alert-waiting; }
+  .alert-danger { @apply alert-exclusion; }
+
+  /* Data Tables */
+  .data-table {
+    @apply w-full text-left text-xs sm:text-sm border-collapse;
+  }
+  .data-th {
+    @apply text-[11px] font-bold text-slate-500 uppercase tracking-wider
+           py-2.5 px-4 sm:px-5 border-b border-slate-200 bg-slate-50/60;
+  }
+  .data-td {
+    @apply py-3 px-4 sm:px-5 align-top border-b border-slate-100 text-slate-700 text-xs sm:text-sm;
+  }
+  .data-td-num {
+    @apply data-td font-mono font-medium text-right tabular-nums;
+  }
+
+  /* Financial values */
+  .money {
+    @apply font-bold text-slate-900 tabular-nums;
+  }
+}
+
+/* ── Print / PDF Styles (@media print) ─────────────────── */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 12mm 12mm;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .section-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .section-header {
+    background-color: #f8fafc !important;
+    padding: 6px 12px !important;
+  }
+
+  .section-body {
+    padding: 8px 12px !important;
+  }
+
+  table {
+    page-break-inside: auto !important;
+    width: 100% !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tbody {
+    display: table-row-group !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  td, th {
+    padding: 5px 8px !important;
+  }
+
+  .quick-ref-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px !important;
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "policy_number": "POL-2025-SME-GLB-00512",
+  "policyholder": {
+    "name": "Nexus Fintech Solutions Pte. Ltd.",
+    "type": "CORPORATE",
+    "industry": "Financial Technology",
+    "employee_count": 45
+  },
+  "plan": {
+    "name": "SME Global Executive Protect",
+    "tier": "Diamond",
+    "effective_date": "2025-04-01",
+    "expiry_date": "2026-03-31",
+    "currency": "USD"
+  },
+  "members": {
+    "total": 65,
+    "employee": 45,
+    "dependent_spouse": 12,
+    "dependent_child": 8
+  },
+  "benefits": [
+    {
+      "type": "INPATIENT",
+      "annual_limit": 1500000,
+      "sub_benefits": [
+        { "name": "Private Single Room & Board", "limit_per_day": 1200, "max_days": 180 },
+        { "name": "Intensive Therapy Unit (ITU / ICU)", "limit_per_day": 3000, "max_days": 45 },
+        { "name": "Complex Surgical Interventions", "limit_per_event": 400000 },
+        { "name": "Emergency Ground & Air Ambulance", "limit_per_event": 25000 }
+      ]
+    },
+    {
+      "type": "OUTPATIENT",
+      "annual_limit": 120000,
+      "sub_benefits": [
+        { "name": "Specialist Consultations", "limit_per_visit": 2500, "visits_per_year": 24 },
+        { "name": "Advanced Diagnostics (MRI, CT, PET)", "limit_per_year": 30000 },
+        { "name": "Prescribed Outpatient Medications", "limit_per_visit": 1500 }
+      ]
+    },
+    {
+      "type": "CRITICAL_ILLNESS",
+      "lifetime_limit": 500000,
+      "waiting_period_days": 90
+    },
+    {
+      "type": "ACCIDENTAL_DEATH",
+      "annual_limit": 750000
+    },
+    {
+      "type": "EVACUATION",
+      "lifetime_limit": 1000000,
+      "sub_benefits": [
+        { "name": "International Air Medical Evacuation", "limit_per_event": 800000 },
+        { "name": "Repatriation of Mortal Remains", "limit_per_event": 100000 },
+        { "name": "Compassionate Family Travel Companion", "limit_per_event": 15000 }
+      ]
+    }
+  ],
+  "exclusions": [
+    "Pre-existing medical conditions not formally declared and underwritten prior to commencement",
+    "Elective plastic surgery, cosmetic enhancements, and non-prescribed treatments",
+    "Intentionally self-inflicted harm, suicide attempts, or dangerous reckless conduct",
+    "Injuries resulting from professional motorsports, skydiving, or undeclared extreme sports",
+    "Hospitalization and care received outside designated network institutions without pre-approval",
+    "War crimes, armed conflict, civil insurrection, radioactive contamination, or nuclear events",
+    "Rehabilitation and medical therapy relating to alcohol dependency, chemical abuse, or illegal drugs",
+    "In-vitro fertilization (IVF), elective fertility programs, and surrogacy-related care",
+    "Experimental medications, off-label clinical treatments, and non-certified gene therapies",
+    "Routine physical assessments and medical checks unrelated to acute sickness or injury diagnosis",
+    "Rest cures, convalescent sanatorium admissions, and long-term palliative custodial nursing",
+    "Acquisition of non-prescribed holistic health products, dietary boosters, or folk remedies",
+    "Treatment obtained in territories subject to international sanctions and trade embargoes"
+  ],
+  "copay": {
+    "inpatient": { "percentage": 0 },
+    "outpatient": { "percentage": 10, "max_per_visit": 150 },
+    "critical_illness": { "percentage": 0 }
+  },
+  "network": {
+    "type": "GLOBAL",
+    "hospital_count": 8500,
+    "clinic_count": 4200,
+    "countries": [
+      "Singapore",
+      "United States",
+      "United Kingdom",
+      "Japan",
+      "Germany",
+      "Switzerland",
+      "Australia",
+      "Thailand",
+      "Vietnam",
+      "United Arab Emirates"
+    ],
+    "notes": "Direct cashierless settlement enabled worldwide across all accredited tertiary medical hospitals."
+  }
+}

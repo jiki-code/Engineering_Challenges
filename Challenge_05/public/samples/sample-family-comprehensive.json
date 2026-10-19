@@ -1,0 +1,118 @@
+{
+  "policy_number": "POL-2022-VN-FAM-3391",
+  "policyholder": {
+    "name": "Nguyễn Minh Khoa",
+    "type": "INDIVIDUAL",
+    "date_of_birth": "1980-05-20",
+    "gender": "Male",
+    "id_number": "079080012345"
+  },
+  "plan": {
+    "name": "Bảo Hiểm Gia Đình Toàn Diện",
+    "tier": "Platinum",
+    "effective_date": "2022-06-01",
+    "expiry_date": "2023-05-31",
+    "currency": "VND"
+  },
+  "members": {
+    "total": 4,
+    "employee": 1,
+    "dependent_spouse": 1,
+    "dependent_child": 2,
+    "dependent_parent": 0
+  },
+  "benefits": [
+    {
+      "type": "INPATIENT",
+      "annual_limit": 500000000,
+      "sub_benefits": [
+        { "name": "Room & Board (General Ward)", "limit_per_day": 2500000, "max_days": 180 },
+        { "name": "Room & Board (ICU)", "limit_per_day": 5000000, "max_days": 60 },
+        { "name": "Surgical Fees", "limit_per_event": 100000000 },
+        { "name": "Anaesthesiologist Fees", "limit_per_event": 20000000 },
+        { "name": "Ambulance Services", "limit_per_event": 2000000 },
+        { "name": "Hospital Miscellaneous", "limit_per_event": 5000000 }
+      ]
+    },
+    {
+      "type": "OUTPATIENT",
+      "annual_limit": 50000000,
+      "sub_benefits": [
+        { "name": "General Practitioner", "limit_per_visit": 500000, "visits_per_year": 52 },
+        { "name": "Specialist Consultation", "limit_per_visit": 1500000, "visits_per_year": 20 },
+        { "name": "Diagnostic (Lab & Imaging)", "limit_per_year": 15000000 },
+        { "name": "Physiotherapy", "limit_per_visit": 800000, "visits_per_year": 30 }
+      ]
+    },
+    {
+      "type": "DENTAL",
+      "annual_limit": 10000000,
+      "waiting_period_days": 60,
+      "sub_benefits": [
+        { "name": "Routine Check-up & Cleaning", "limit_per_year": 3000000 },
+        { "name": "Basic Restorative (Fillings)", "limit_per_year": 4000000 },
+        { "name": "Major Restorative (Root Canal, Crown)", "limit_per_year": 3000000 },
+        { "name": "Orthodontics", "covered": true, "notes": "Not covered under this plan" }
+      ]
+    },
+    {
+      "type": "MATERNITY",
+      "lifetime_limit": 80000000,
+      "waiting_period_days": 270,
+      "sub_benefits": [
+        { "name": "Normal Delivery", "limit_per_event": 30000000 },
+        { "name": "Caesarean Section", "limit_per_event": 50000000 },
+        { "name": "Antenatal Care", "limit_per_pregnancy": 8000000 },
+        { "name": "Postnatal Care", "limit_per_pregnancy": 5000000 },
+        { "name": "Newborn Care (first 30 days)", "limit_per_event": 10000000 }
+      ]
+    },
+    {
+      "type": "VISION",
+      "annual_limit": 5000000,
+      "waiting_period_days": 30,
+      "sub_benefits": [
+        { "name": "Eye Examination", "limit_per_year": 500000 },
+        { "name": "Prescription Eyeglasses / Contact Lenses", "limit_per_year": 3000000 },
+        { "name": "Laser Eye Surgery (LASIK)", "limit_per_event": 5000000 }
+      ]
+    },
+    {
+      "type": "MENTAL_HEALTH",
+      "annual_limit": 20000000,
+      "sub_benefits": [
+        { "name": "Outpatient Psychiatric Consultation", "limit_per_visit": 1000000, "visits_per_year": 20 },
+        { "name": "Inpatient Psychiatric Admission", "limit_per_event": 15000000 },
+        { "name": "Psychotherapy / Counselling", "limit_per_visit": 800000, "visits_per_year": 24 }
+      ]
+    }
+  ],
+  "exclusions": [
+    "Pre-existing conditions not declared at time of application",
+    "Cosmetic, aesthetic, or elective procedures",
+    "Self-inflicted injuries or suicide attempts",
+    "Substance abuse treatment (alcohol, drugs, narcotics)",
+    "War, civil unrest, terrorism, or nuclear incidents",
+    "Infertility treatments or assisted reproduction (IVF, IUI)",
+    "Experimental or unproven medical treatments",
+    "Treatment received outside Vietnam without prior authorization",
+    "HIV/AIDS-related treatment (except accidental infection)",
+    "Dental implants and prosthetics",
+    "Routine health check-ups not associated with illness",
+    "Traditional medicine, herbal remedies, or acupuncture"
+  ],
+  "copay": {
+    "inpatient":     { "percentage": 10, "max_per_visit": 5000000 },
+    "outpatient":    { "percentage": 20, "max_per_visit": 200000 },
+    "dental":        { "percentage": 20 },
+    "vision":        { "percentage": 20 },
+    "mental_health": { "percentage": 0 }
+  },
+  "network": {
+    "type": "PREFERRED_PROVIDER",
+    "hospital_count": 280,
+    "clinic_count": 150,
+    "countries": ["Vietnam"],
+    "notes": "Direct billing available at all network hospitals. Non-network claims require reimbursement within 90 days."
+  }
+}
